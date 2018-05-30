@@ -5,7 +5,6 @@
  */
 package ocjene;
 import java.util.Scanner;
-import jdk.internal.org.objectweb.asm.commons.Method;
 /**
  *
  * @author Andrej
@@ -31,7 +30,7 @@ public class Ocjene {
         Scanner unos = new Scanner(System.in);
         
 //  Petlja za prolaz kroz sve ispite
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < predmeti.length; i++) {
         
 //  Petlja za prolaz kroz tri kviza
         System.out.println(predmeti[i]);
