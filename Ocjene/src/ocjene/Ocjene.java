@@ -79,6 +79,8 @@ public class Ocjene {
             System.out.println(mat);
             System.out.println(kvizovi);
             System.out.println("GitHub nešto radi");
+        
+            System.out.println("GitHub stvarno nešto radi");
         }
     
     public static int bodovi10(){
