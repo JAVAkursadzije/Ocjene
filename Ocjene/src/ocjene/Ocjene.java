@@ -41,6 +41,10 @@ public class Ocjene {
                     case "ne":
                         System.out.println("Odgovorite na sljedeca pitanja:");
                         System.out.println(testovi[j][i]);
+                        // pitanja();                          //pozivanje metode pitanja() da bi se pristupilo kvizu i bodovanju odgovora
+                        //System.out.println(pitanja());      //iz nekog razloga dva puta postavlja pitanje 1
+                        ocjene[i] += pitanja();
+
                         break;
                 }
             }   
@@ -115,4 +119,22 @@ public class Ocjene {
                 }
                 return kviz1;
     }
+    public static int pitanja(){                // započeta metoda pitanja()
+       int [] pitanje={1, 2, 3, 4, 5, 6, 7, 8, 9};
+       int odg, bod=0, i;
+        for (i = 0; i < 2; i++) {
+             System.out.println((i+1) + ". Pitanje "+(i+1)+"?");
+                System.out.print((i+1) + ". Odgovor "+(i+1)+": ");
+        Scanner scan=new Scanner (System.in);
+            odg=scan.nextInt();    
+        if (odg==pitanje[i]){
+            bod=bod+5;
+        } else bod=bod+0;
+            bod=+bod;
+            System.out.println("bodovi "+bod);
+        }
+            return bod;
+    }
+
+
 }
