@@ -82,12 +82,20 @@ public class Ocjene {
         int prosjek=0;
         System.out.println("\nStudent je ostvario sljedeci uspjeh:\n");
             for (int i = 0; i < predmeti.length; i++) {
-                System.out.println(predmeti[i] + ": " + ocjene[i]+"%");
+                System.out.print(predmeti[i] + ": " + ocjene[i]+"%");
+                if (ocjene[i] < 55) {
+                    System.out.println(" - NEDOVOLJNO");
+                }
+                else{
+                    System.out.println(" - OCJENA: " + ((ocjene[i]+5)-(ocjene[i]+5)%10)/10);
+                }
+                    
                 prosjek += ocjene[i];
         }
+            
             prosjek /= predmeti.length;
         System.out.println("\nPROSJECNO:" + prosjek + "%");
-            
+    
             
 }
     
