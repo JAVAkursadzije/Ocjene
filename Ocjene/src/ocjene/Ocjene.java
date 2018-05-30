@@ -18,7 +18,7 @@ public class Ocjene {
         int mat=0, fiz=0, bio=0, hem=0, geo=0;
         int kviz1=0;
         
-        String[] predmeti = {"mat", "fiz", "bio", "hem", "geo"};
+        String[] predmeti = {"Matematika", "Fizika", "Biologija", "Hemija", "Geografija"};
         int [] ocjene = {0, 0, 0, 0, 0};
         String [][] testovi = {
             {"matematikaTest1", "fizikaTest1", "biologijaTest1", "hemijaTest1", "geografijaTest1"},
@@ -52,20 +52,6 @@ public class Ocjene {
                     if (kviz1>=0 && kviz1<=10){
                         ocjene[i] =+ kviz1;
                         kvizovi = true;}
-//                try {
-//                    System.out.print("Unesite broj bodova: ");
-//                    kviz1 = unos.nextInt();
-//                    if (kviz1 < 0 || kviz1 > 10) throw new IllegalArgumentException();
-//                    ocjene[i] =+ kviz1;
-//                    kvizovi = true;
-//                }
-//                catch (IllegalArgumentException iae) {
-//                    System.out.println("Broj bodova nije u opsegu 0-10!");
-//                }
-//                catch (Exception e) {
-//                    System.out.println("Niste pravilno unijeli broj bodova!");
-//                    unos.next();
-//                }
                 }
                 kvizovi = false;
                 break;
@@ -74,13 +60,23 @@ public class Ocjene {
                 System.out.println(testovi[j][i]);
                 break;
         }
-        } 
+        }
+            /*  Unos bodova sa pismenog dijela ispita
+            **  Bodovi se unose kao integer i ispituje se tacnost unosa metodom bodovi20
+            */
+            
+            System.out.println("Unesite bodove sa pismenog dijela ispita:");
+            while (kvizovi != true) 
+                {   
+                    kviz1 = bodovi20();
+                    if (kviz1>=0 && kviz1<=20){
+                        ocjene[i] =+ kviz1;
+                        kvizovi = true;}
+                }
+                kvizovi = false;
         }
             System.out.println(mat);
             System.out.println(kvizovi);
-            System.out.println("GitHub nešto radi2");
-        
-            System.out.println("GitHub stvarno nešto radi");
         }
     
     public static int bodovi10(){
@@ -90,8 +86,27 @@ public class Ocjene {
                     System.out.print("Unesite broj bodova: ");
                     kviz1 = unos.nextInt();
                     if (kviz1 < 0 || kviz1 > 10) throw new IllegalArgumentException();
+                    return kviz1;                    
+                }
+                catch (IllegalArgumentException iae) {
+                    System.out.println("Broj bodova nije u opsegu 0-10!");
                     return kviz1;
-                    
+                }
+                catch (Exception e) {
+                    System.out.println("Niste pravilno unijeli broj bodova!");
+                    unos.next();
+                    return kviz1;
+                }
+    }
+    
+    public static int bodovi20(){
+                Scanner unos = new Scanner (System.in);
+                int kviz1=25;
+                try {
+                    System.out.print("Unesite broj bodova: ");
+                    kviz1 = unos.nextInt();
+                    if (kviz1 < 0 || kviz1 > 20) throw new IllegalArgumentException();
+                    return kviz1;                    
                 }
                 catch (IllegalArgumentException iae) {
                     System.out.println("Broj bodova nije u opsegu 0-10!");
