@@ -109,7 +109,7 @@ public class Ocjene {
                     return kviz1;                    
                 }
                 catch (IllegalArgumentException iae) {
-                    System.out.println("Broj bodova nije u opsegu 0-10!");
+                    System.out.println("Broj bodova nije u opsegu 0-20!");
                     return kviz1;
                 }
                 catch (Exception e) {
