@@ -50,7 +50,7 @@ public class Ocjene {
                         break;
                     case "ne":
                         System.out.println("Odgovorite na sljedeca pitanja:\n");
-                        ocjene[i] += kviz1();
+                        ocjene[i] += Ocjene.kviz1();
                         break;
                 }
             }   
@@ -161,4 +161,7 @@ public class Ocjene {
         }
         return kviz1;
     }
+    
+    
+// probna izmjena
 }
